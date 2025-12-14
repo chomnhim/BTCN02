@@ -1,18 +1,22 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import MovieHero from "./components/MovieHero";
+import MovieSlider from "./components/MovieSlider";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import "./index.css";
 
 function App() {
-  const [dark, setDark] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={dark ? "dark" : ""}>
-      <Header toggleDarkMode={() => setDark(!dark)} />
+    <div className={darkMode ? "app dark" : "app"}>
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <Navbar />
-      <Home />
+      <main className="container">
+        <MovieHero />
+        <MovieSlider title="Most Popular" />
+        <MovieSlider title="Top Rating" />
+      </main>
       <Footer />
     </div>
   );

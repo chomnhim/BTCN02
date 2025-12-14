@@ -1,10 +1,9 @@
-function Navbar() {
+export default function Navbar() {
   return (
     <nav className="navbar">
-      <button>🏠 Home</button>
-      <input type="text" placeholder="Search movie..." />
+      <button>🏠</button>
+      <input placeholder="Search..." />
+      <button>Search</button>
     </nav>
   );
 }
-
-export default Navbar;

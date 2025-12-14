@@ -1,11 +1,17 @@
-function Header({ toggleDarkMode }) {
+export default function Header({ darkMode, setDarkMode }) {
   return (
     <header className="header">
-      <h1>Movies Info</h1>
-      <p>MSSV: 23122047</p>
-      <button onClick={toggleDarkMode}>🌙 Dark mode</button>
+      <div className="left">
+        <b>MSSV:</b> 23122047
+      </div>
+
+      <h2>Movies info</h2>
+
+      <div className="right">
+        <button onClick={() => setDarkMode(!darkMode)}>
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+      </div>
     </header>
   );
 }
-
-export default Header;

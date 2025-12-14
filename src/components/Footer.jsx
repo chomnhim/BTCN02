@@ -1,10 +1,7 @@
-function Footer() {
+export default function Footer() {
   return (
     <footer className="footer">
-      <p>Web App Dev - Movies Info</p>
-      <p>© 2025</p>
+      WebAppDev - Movies Info
     </footer>
   );
 }
-
-export default Footer;
